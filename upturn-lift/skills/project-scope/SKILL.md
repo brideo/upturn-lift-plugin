@@ -41,7 +41,7 @@ Call `save_project_scope` with `project_id`, the scope and the tasks. The projec
 
 ## 5. Hand-off
 
-Tell the owner the scope in a few lines (goal, number of tasks by type, the biggest risk) and the next step: open **Claude Code in the site's code repository** and run `/lift:project-build <project uuid>`. Owner and content tasks are theirs to do; say which.
+Tell the owner the scope in a few lines (goal, number of tasks by type, the biggest risk) and the next step: open **Claude Code in the site's code repository** and run `/lift:project-build <project uuid>`. Owner and content tasks are theirs to do; say which. If the project's `automation.enabled` is true, say instead that Upturn Lift builds it on GitHub by itself within a few minutes and opens a pull request; the command is only for building it by hand.
 
 ## Rules
 

@@ -25,6 +25,8 @@ Call `save_project_test_result` once per task, with `checks` as `[{check, passed
 
 ## 4. Hand-off
 
+If the project's `automation.enabled` is true, Upturn Lift tests it on GitHub by itself once its deploy succeeds, and sends a failed project back to building once; this skill is for testing by hand. If `automation.running` is `test`, say a test is running now and stop.
+
 Tell the owner the outcome in a few lines:
 
 - **Complete:** what's verified, and that Lift measures its impact against the baseline at 30, 60 and 90 days on the project page.

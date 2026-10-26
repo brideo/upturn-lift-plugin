@@ -23,6 +23,8 @@ Call `get_project` with `project_id` and `purpose: build`. It returns the scope,
 
 If the project isn't scoped (or `failed` and sent back to building), say so: an unscoped project needs `/lift:project-scope <project uuid>` first. If it's `failed`, the failed checks come with it: fix those first.
 
+**Automated sites:** if the project's `automation.enabled` is true, Upturn Lift builds it on GitHub by itself ("Run projects automatically"), so this skill is only for building it by hand. If `automation.running` is `build`, a run is working on it now: say so and stop rather than build it twice. Otherwise confirm the owner wants to build it here before going on.
+
 ## 3. Build
 
 1. `update_project` with `status: in_progress`.

@@ -60,6 +60,7 @@ Tell the owner which projects are approved and which are waiting on the **Projec
 
 - On a yes, in Claude Code hand each to the `lift-project-manager` agent with the project's UUID (one at a time, or in parallel); elsewhere carry on as the **project-scope** skill for each.
 - Otherwise give the command for later: `/lift:project-scope <project uuid>`.
+- If the site runs projects automatically (`automation.enabled` on any project from `get_project`), Upturn Lift scopes, builds and tests approved projects on GitHub by itself, so say that instead of offering to scope them now.
 
 ## Unattended mode
 
