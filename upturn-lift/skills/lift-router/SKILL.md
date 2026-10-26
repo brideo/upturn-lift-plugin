@@ -28,6 +28,7 @@ Then call `get_run_order` with the `site_id` and `purpose: check`.
 | "fix the tasks", "do the developer tasks" (in Claude Code) | **task-plan**, do mode |
 | "test the fixes", "did that work", "verify the shipped tasks" | **task-plan**, test mode |
 | "proposal", "quote", "pitch", "scope of work for a client" | **client-proposal** |
+| "security audit", "vulnerability or CVE check", "is my store secure", "security report for my developers" | **security-audit** |
 | Broken links, redirects, titles, canonicals, anything site-wide | `get_seo_audit` directly; offer **site-strategy** after |
 
 For an open request ("help me grow sales"), follow the run order: route to the first step that's **ready**. If a step is **locked**, say what's locking it and route to that step instead.

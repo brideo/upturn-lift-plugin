@@ -41,6 +41,7 @@ Setup checks the connector, picks your site, shows where it's up to, and links e
 | "fix the tasks" (Claude Code) | Works through the plan's developer tasks in your repo |
 | "test the fixes" | Checks shipped tasks on the live site and marks each verified or failed |
 | "write a proposal for this client" | A priced proposal PDF backed by the measurements |
+| "run a security audit" | A passive, report-only review of your platform's known vulnerabilities, key pages and sign-in forms, ranked by severity for your developers |
 | "catch up on Upturn Lift" | Runs whatever is pending, in order. Good as a weekly habit |
 
 ## Works better with

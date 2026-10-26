@@ -57,7 +57,7 @@ The plugin is in [`upturn-lift/`](upturn-lift). See [its README](upturn-lift/REA
 | Connector | `https://upturnstudio.com.au/mcp/lift`, signed in with your Upturn account |
 | `lift-onboard` | The guided setup |
 | `lift-router` | Works out the next step for your site |
-| `site-brief`, `page-audit`, `site-strategy`, `task-plan`, `client-proposal` | One skill per job |
+| `site-brief`, `page-audit`, `site-strategy`, `task-plan`, `security-audit`, `client-proposal` | One skill per job |
 
 ## Updates
 
