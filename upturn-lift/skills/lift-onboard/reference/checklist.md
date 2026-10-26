@@ -1,6 +1,6 @@
 # Setup checklist
 
-`list_sites` returns each site's `setup` list: `step`, `label`, `status` (`done`, `skipped` or `pending`) and `url`. Give the owner the `url` exactly as returned. Don't build dashboard links yourself.
+`list_sites` (and `add_site`, for a site it has just added) returns each site's `setup` list: `step`, `label`, `status` (`done`, `skipped` or `pending`) and `url`. Give the owner the `url` exactly as returned. Don't build dashboard links yourself.
 
 | Step | Who does it | What it unlocks | Done when |
 |---|---|---|---|

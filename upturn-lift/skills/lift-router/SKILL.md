@@ -19,6 +19,7 @@ Then call `get_run_order` with the `site_id` and `purpose: check`.
 | The owner says something like… | Route to |
 |---|---|
 | "set me up", "get started", "connect my site" | **lift-onboard** |
+| "set up a new site", "add a site", "add https://… to Upturn Lift", a site that isn't in `list_sites` | **lift-onboard** (it adds the site, then sets it up) |
 | "what is this site for", "research the brief", "set up the goals" | **site-brief** |
 | "audit this page", "full audit for scan 42", "audit my pending pages", "review the latest scan" | **page-audit** |
 | "catch up", "run whatever is pending", "do my weekly run" | **page-audit** in catch-up mode (`get_run_order` with `purpose: run`) |

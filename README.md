@@ -40,7 +40,7 @@ Then type `/mcp`, choose **upturn-lift**, sign in with your Upturn account, and 
 Say "set up Upturn Lift" and Claude:
 
 1. Checks the connector is signed in.
-2. Picks your website (or asks which, if you have several).
+2. Picks your website, or adds it to your account if it's new. Say "set up a new site: https://…" any time to onboard another.
 3. Shows where it's up to: brief, page audits, marketing strategy, task plan.
 4. Links each dashboard step only you can do, one at a time: the browser extension, Google Analytics and Search Console, and the SEO audit. Skip any you like.
 5. Researches and saves your marketing brief, the goal every audit is ranked against.

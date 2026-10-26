@@ -31,6 +31,7 @@ Setup checks the connector, picks your site, shows where it's up to, and links e
 | Say | What happens |
 |---|---|
 | "set up Upturn Lift" | Guided setup: connector, site, dashboard steps, then your marketing brief |
+| "set up a new site: https://…" | Adds the site to your account and walks you through its setup |
 | "what should I do next?" | Checks where your site is up to and picks the next step |
 | "research my marketing brief" | Writes the brief every audit is ranked against |
 | "audit my pending pages" | Full audits of every scan waiting, highest priority first |
