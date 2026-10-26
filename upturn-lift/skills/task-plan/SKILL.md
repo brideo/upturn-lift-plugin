@@ -22,7 +22,7 @@ Pick the site first (`list_sites`).
 3. Anything that isn't code (Google Ads, Merchant Center, CMS content) is marked `needs_owner` with exactly what to change.
 4. Never push or deploy. Tell the owner to deploy and rescan, or say "test the fixes".
 
-For page-level tasks without a plan, use `list_tasks` and `update_task` the same way.
+For page-level tasks without a plan, use `list_tasks` and `update_task` the same way. Only work tasks the owner accepted into their to-dos (`list_tasks` returns only those by default); suggestions still in the Inbox and dismissed ones are not work to do.
 
 ## Test: "did that work?"
 

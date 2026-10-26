@@ -30,10 +30,13 @@ You need an Upturn Lift subscription. [See the plans](https://upturnstudio.com.a
 
 ```
 /plugin marketplace add brideo/upturn-lift-plugin
-/plugin install upturn-lift@upturn
+/plugin install lift@upturn
 ```
 
-Then type `/mcp`, choose **upturn-lift**, sign in with your Upturn account, and say **"set up Upturn Lift"**.
+Then type `/mcp`, choose **upturn-lift**, sign in with your Upturn account, and say **"set up Upturn Lift"** or type `/lift:onboard`.
+
+> **Upgrading from 1.x?** In 2.0 the plugin is called `lift`, so its commands are `/lift:onboard`, `/lift:marketing-team` and so on (they were `/upturn-lift:…`). Uninstall the old `upturn-lift` plugin and install `lift` (in Claude Code: `/plugin uninstall upturn-lift@upturn`, then `/plugin install lift@upturn`). Your account and sites stay as they are, though you may need to sign the connector in again (`/mcp` in Claude Code, the plugin's **Connectors** tab elsewhere).
+
 
 ## What setup does
 
@@ -44,7 +47,8 @@ Say "set up Upturn Lift" and Claude:
 3. Shows where it's up to: brief, page audits, marketing strategy, task plan.
 4. Links each dashboard step only you can do, one at a time: the browser extension, Google Analytics and Search Console, and the SEO audit. Skip any you like.
 5. Researches and saves your marketing brief, the goal every audit is ranked against.
-6. Tells you the next thing to say.
+6. Walks you through each of your teams (Marketing, then Ecommerce or Product where they apply, Technical and Client services) and saves the goal each one works towards.
+7. Offers to start the Marketing team, and tells you the next thing to say.
 
 Progress lives in your Upturn Lift account, so come back any time and say "what should I do next?".
 
@@ -55,12 +59,28 @@ The plugin is in [`upturn-lift/`](upturn-lift). See [its README](upturn-lift/REA
 | Part | What it is |
 |---|---|
 | Connector | `https://upturnstudio.com.au/mcp/lift`, signed in with your Upturn account |
-| `lift-onboard` | The guided setup |
-| `lift-router` | Works out the next step for your site |
+| `onboard` | The guided setup (`/lift:onboard`) |
+| `router` | Works out the next step for your site |
 | `site-brief`, `page-audit`, `site-strategy`, `task-plan`, `security-audit`, `client-proposal` | One skill per job |
-| `department` | A head of department that splits a goal between specialists |
+| `marketing-team`, `ecommerce-team`, `technical-team`, `product-team`, `client-services-team` | One skill per team: its head asks for the goal, splits it between specialists and reports one ranked plan (`/lift:marketing-team` and so on) |
 | `product-strategy` | The Head of Product: beachhead, whole product, activation, positioning, bets and roadmap |
-| `agents/lift-*` | The specialists a department hands work to (sub-agents in Claude Code) |
+| `agents/lift-*` | The specialists a team hands work to (sub-agents in Claude Code) |
+
+## Commands
+
+| Command | What it does |
+|---|---|
+| `/lift:onboard` | Guided setup: connector, site, dashboard steps, the marketing brief and each team's goal |
+| `/lift:marketing-team` | The Marketing team sets its goal with you, then the strategist, SEO, content, competitor and PPC specialists work on it |
+| `/lift:ecommerce-team` | The Ecommerce team (stores and marketplaces): product pages, the feed and merchandising |
+| `/lift:technical-team` | The Technical team: security, speed and page security, written for your developers |
+| `/lift:product-team` | The Product team (software and marketplaces): the Head of Product's advisers, then a product strategy |
+| `/lift:client-services-team` | The Client services team: the brief, the plan of work and proposals |
+| `/lift:site-brief`, `/lift:page-audit`, `/lift:site-strategy`, `/lift:task-plan`, `/lift:security-audit`, `/lift:product-strategy`, `/lift:client-proposal` | One job each |
+| `/lift:router` | Works out the next step for your site |
+
+Each team command takes an optional site: `/lift:marketing-team <site UUID or address>`. Without one, Claude lists your sites and asks which. You don't have to type commands: saying what you want works too.
+
 
 ## Updates
 

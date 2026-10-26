@@ -19,12 +19,15 @@ You need an Upturn Lift subscription. See the plans at [upturnstudio.com.au/lift
 
 ```
 /plugin marketplace add brideo/upturn-lift-plugin
-/plugin install upturn-lift@upturn
+/plugin install lift@upturn
 ```
 
-Then type `/mcp`, choose **upturn-lift**, sign in, and say **"set up Upturn Lift"**.
+Then type `/mcp`, choose **upturn-lift**, sign in, and say **"set up Upturn Lift"** or type `/lift:onboard`.
 
-Setup checks the connector, picks your site, shows where it's up to, and links each dashboard step only you can do: the browser extension, Google Analytics and Search Console, and the SEO audit. Then it writes your marketing brief. It takes 10 to 15 minutes.
+> **Upgrading from 1.x?** In 2.0 the plugin is called `lift`, so its commands are `/lift:onboard`, `/lift:marketing-team` and so on (they were `/upturn-lift:…`). Uninstall the old `upturn-lift` plugin and install `lift` (in Claude Code: `/plugin uninstall upturn-lift@upturn`, then `/plugin install lift@upturn`). Your account and sites stay as they are, though you may need to sign the connector in again (`/mcp` in Claude Code, the plugin's **Connectors** tab elsewhere).
+
+
+Setup checks the connector, picks your site, shows where it's up to, and links each dashboard step only you can do: the browser extension, Google Analytics and Search Console, and the SEO audit. Then it writes your marketing brief and asks for each team's goal. It takes 15 to 20 minutes.
 
 ## What you can say
 
@@ -41,10 +44,27 @@ Setup checks the connector, picks your site, shows where it's up to, and links e
 | "fix the tasks" (Claude Code) | Works through the plan's developer tasks in your repo |
 | "test the fixes" | Checks shipped tasks on the live site and marks each verified or failed |
 | "write a proposal for this client" | A priced proposal PDF backed by the measurements |
-| "have marketing grow organic revenue" | A department (picked for your type of site) splits the goal between specialists, runs them side by side and reports one ranked plan |
-| "be my Head of Product" | Who to win first, what mainstream customers still need, three bets and a roadmap for a product business |
+| "set goals for my teams" | Asks each of your teams' questions and saves the goal each one works towards |
+| "have marketing grow organic revenue" (`/lift:marketing-team`) | The team's head confirms the goal with you, splits it between specialists, runs them side by side and reports one ranked plan to Team › Reports |
+| "make the site safer" (`/lift:technical-team`) | The same for the Technical team; `/lift:ecommerce-team`, `/lift:product-team` and `/lift:client-services-team` for the others your site has |
+| "be my Head of Product" (`/lift:product-strategy`) | Who to win first, what mainstream customers still need, three bets and a roadmap for a product business |
 | "run a security audit" | A passive, report-only review of your platform's known vulnerabilities, key pages and sign-in forms, ranked by severity for your developers |
 | "catch up on Upturn Lift" | Runs whatever is pending, in order. Good as a weekly habit |
+
+## Commands
+
+| Command | What it does |
+|---|---|
+| `/lift:onboard` | Guided setup: connector, site, dashboard steps, the marketing brief and each team's goal |
+| `/lift:marketing-team` | The Marketing team sets its goal with you, then the strategist, SEO, content, competitor and PPC specialists work on it |
+| `/lift:ecommerce-team` | The Ecommerce team (stores and marketplaces): product pages, the feed and merchandising |
+| `/lift:technical-team` | The Technical team: security, speed and page security, written for your developers |
+| `/lift:product-team` | The Product team (software and marketplaces): the Head of Product's advisers, then a product strategy |
+| `/lift:client-services-team` | The Client services team: the brief, the plan of work and proposals |
+| `/lift:site-brief`, `/lift:page-audit`, `/lift:site-strategy`, `/lift:task-plan`, `/lift:security-audit`, `/lift:product-strategy`, `/lift:client-proposal` | One job each |
+| `/lift:router` | Works out the next step for your site |
+
+Each team command takes an optional site: `/lift:marketing-team <site UUID or address>`. Without one, Claude lists your sites and asks which. You don't have to type commands: saying what you want works too.
 
 ## Works better with
 

@@ -1,8 +1,8 @@
 {
-  "name": "upturn-lift",
+  "name": "lift",
   "displayName": "Upturn Lift",
-  "version": "1.4.0",
-  "description": "Grow your website's sales with Upturn Lift. Connects your Upturn Lift account and walks you through setup, then writes your marketing brief, audits your pages, plans your marketing strategy and ranks the tasks that matter most, writes a security audit for your developers, and runs whole departments on a goal. Install, connect, then say \"set up Upturn Lift\".",
+  "version": "2.0.0",
+  "description": "Grow your website's sales with Upturn Lift. Connects your Upturn Lift account and walks you through setup with /lift:onboard, then writes your marketing brief, audits your pages, plans your marketing strategy, ranks the tasks that matter most and writes a security audit for your developers. Each team has its own skill (/lift:marketing-team, /lift:ecommerce-team, /lift:technical-team, /lift:product-team, /lift:client-services-team) that asks for its goal and runs its specialists on it. Install, connect, then say \"set up Upturn Lift\".",
   "author": {
     "name": "Nathan McBride",
     "url": "https://upturnstudio.com.au"

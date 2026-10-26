@@ -7,9 +7,9 @@
   },
   "plugins": [
     {
-      "name": "upturn-lift",
+      "name": "lift",
       "source": "./upturn-lift",
-      "description": "Connect Upturn Lift to Claude and get walked through setup: the marketing brief, page audits, the marketing strategy and a ranked task plan for your website.",
+      "description": "Connect Upturn Lift to Claude and get walked through setup with /lift:onboard: the marketing brief, page audits, the marketing strategy, a ranked task plan, and a team skill per department that sets its goal and runs it.",
       "category": "marketing"
     }
   ]
