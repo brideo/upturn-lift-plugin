@@ -1,16 +1,18 @@
-# Upturn Lift for Claude
+<img src=".claude-plugin/icon.png" alt="Upturn Lift" width="72" height="72" align="right">
+
+# Upturn Lift
 
 Upturn Lift scans your website the way a shopper sees it and measures what's holding sales back. This plugin connects your Upturn Lift account to Claude and walks you through setup. Claude then writes your marketing brief, audits your pages, plans your marketing strategy and ranks the tasks that matter most. Everything is saved back to your Upturn Lift dashboard.
 
-You need an Upturn Lift subscription: [upturnstudio.com.au/lift](https://upturnstudio.com.au/lift).
+You need an Upturn Lift subscription. See the plans at [upturnstudio.com.au/lift](https://upturnstudio.com.au/lift).
 
-## Install
+## Set up
 
 **Claude Desktop, Cowork or claude.ai**
 
 1. Open **Customize › Plugins**, click **Add**, then **Add marketplace**, and paste `brideo/upturn-lift-plugin`.
 2. Install **Upturn Lift**.
-3. Open the plugin's **Connectors** tab, click **Connect** and sign in with your Upturn account.
+3. Open the plugin's **Connectors** tab, click **Connect** and sign in with your [Upturn account](https://upturnstudio.com.au/login).
 4. In a new chat, say **"set up Upturn Lift"**.
 
 **Claude Code**
@@ -21,6 +23,8 @@ You need an Upturn Lift subscription: [upturnstudio.com.au/lift](https://upturns
 ```
 
 Then type `/mcp`, choose **upturn-lift**, sign in, and say **"set up Upturn Lift"**.
+
+Setup checks the connector, picks your site, shows where it's up to, and links each dashboard step only you can do: the browser extension, Google Analytics and Search Console, and the SEO audit. Then it writes your marketing brief. It takes 10 to 15 minutes.
 
 ## What you can say
 
@@ -38,6 +42,12 @@ Then type `/mcp`, choose **upturn-lift**, sign in, and say **"set up Upturn Lift
 | "write a proposal for this client" | A priced proposal PDF backed by the measurements |
 | "catch up on Upturn Lift" | Runs whatever is pending, in order. Good as a weekly habit |
 
-## Privacy
+## Works better with
 
-The connector only sees your own sites, and only while your subscription is active. Claude never submits forms, signs in or changes settings on your site. To disconnect, remove Upturn Lift under **Customize › Connectors**.
+- Anthropic's **Marketing** plugin (Customize › Plugins › Browse plugins) for more thorough SEO, brand and competitor reviews.
+- **Claude in Chrome**, so Claude can check the live page's mobile layout, console errors and memory.
+
+## Help and privacy
+
+- Questions or problems: [upturnstudio.com.au/contact](https://upturnstudio.com.au/contact).
+- The connector only sees your own sites, and only while your subscription is active. Claude never submits forms, signs in or changes settings on your website. To disconnect, remove Upturn Lift under **Customize › Connectors**. [Privacy policy](https://upturnstudio.com.au/privacy).
