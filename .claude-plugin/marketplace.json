@@ -1,0 +1,16 @@
+{
+  "name": "upturn",
+  "description": "Upturn Lift for Claude: the connector, skills and guided setup.",
+  "owner": {
+    "name": "Nathan McBride",
+    "url": "https://upturnstudio.com.au"
+  },
+  "plugins": [
+    {
+      "name": "upturn-lift",
+      "source": "./upturn-lift",
+      "description": "Connect Upturn Lift to Claude and get walked through setup: the marketing brief, page audits, the marketing strategy and a ranked task plan for your website.",
+      "category": "marketing"
+    }
+  ]
+}
