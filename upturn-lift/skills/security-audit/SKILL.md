@@ -17,7 +17,7 @@ This is a defensive review of a site the owner added to their own Upturn Lift ac
 
 ## Steps
 
-1. Pick the site (`list_sites`). Call `get_security_audit_inputs`. It returns the platform evidence, every scanned page's security facts, the automated findings, the sign-in and checkout URLs to look at, the previous audit and the method. **Follow that method.** If it says there are no scans, ask the owner to scan a few pages first.
+1. Pick the site (`list_sites`). Call `get_security_audit_inputs` with `mode: interactive`, or `mode: unattended` when this is a scheduled run or nobody is there to answer. Interactive: ask its `questions` up front as clickable multiple choice (recommended option first). Unattended: take the recommended answers and save them under `open_questions`. After that, don't stop for the owner again. The inputs hold the platform evidence, every scanned page's security facts, the automated findings, the sign-in and checkout URLs to look at, the previous audit and the method. **Follow that method.** If it says there are no scans, ask the owner to scan a few pages first.
 2. Identify the platform, version, extensions and libraries, then research the CVEs and advisories that apply to them. Cite each CVE id with its CVSS score and links. Never invent an id or a score.
 3. Review the homepage, a category, a product, a content page, the cart and the checkout, using scans where they exist and fetching the rest. Checkout is looked at, never used.
 4. Find the login and registration forms and record what their HTML shows: HTTPS, CSRF token, bot protection, password autocomplete and rules, two-factor sign-in. Mark rate limiting and lockout as not tested.
