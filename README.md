@@ -59,6 +59,7 @@ The plugin is in [`upturn-lift/`](upturn-lift). See [its README](upturn-lift/REA
 | `lift-router` | Works out the next step for your site |
 | `site-brief`, `page-audit`, `site-strategy`, `task-plan`, `security-audit`, `client-proposal` | One skill per job |
 | `department` | A head of department that splits a goal between specialists |
+| `product-strategy` | The Head of Product: beachhead, whole product, activation, positioning, bets and roadmap |
 | `agents/lift-*` | The specialists a department hands work to (sub-agents in Claude Code) |
 
 ## Updates

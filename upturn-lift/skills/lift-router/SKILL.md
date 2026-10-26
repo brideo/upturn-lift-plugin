@@ -29,6 +29,7 @@ Then call `get_run_order` with the `site_id` and `purpose: check`.
 | "test the fixes", "did that work", "verify the shipped tasks" | **task-plan**, test mode |
 | "proposal", "quote", "pitch", "scope of work for a client" | **client-proposal** |
 | A broad goal ("grow organic revenue", "make the store safer", "what should marketing do this quarter"), or a department or team | **department** |
+| "product strategy", "product roadmap", "what should we build next", pricing and packaging, product-market fit, reaching mainstream customers | **product-strategy** (or **department** with Product for the whole team) |
 | "security audit", "vulnerability or CVE check", "is my store secure", "security report for my developers" | **security-audit** |
 | Broken links, redirects, titles, canonicals, anything site-wide | `get_seo_audit` directly; offer **site-strategy** after |
 

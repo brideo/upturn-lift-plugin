@@ -42,6 +42,7 @@ Setup checks the connector, picks your site, shows where it's up to, and links e
 | "test the fixes" | Checks shipped tasks on the live site and marks each verified or failed |
 | "write a proposal for this client" | A priced proposal PDF backed by the measurements |
 | "have marketing grow organic revenue" | A department (picked for your type of site) splits the goal between specialists, runs them side by side and reports one ranked plan |
+| "be my Head of Product" | Who to win first, what mainstream customers still need, three bets and a roadmap for a product business |
 | "run a security audit" | A passive, report-only review of your platform's known vulnerabilities, key pages and sign-in forms, ranked by severity for your developers |
 | "catch up on Upturn Lift" | Runs whatever is pending, in order. Good as a weekly habit |
 
