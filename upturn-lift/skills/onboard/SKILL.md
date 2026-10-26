@@ -64,6 +64,7 @@ Everything Upturn Lift knows lives on the server, so there is nothing to store l
    4. Save the answers with `save_team_goal` (one-line `statement`, `set_by: "Onboarding"`). If they skipped, save nothing and move on.
    5. When every team is done, summarise in a few lines: each team and its goal, or "skipped".
    6. Offer to run one team now, recommending **Marketing**: "Want the Marketing team to start on its goal now?" On a yes, carry on as the **marketing-team** skill. Give the commands for the rest, for later: `/lift:ecommerce-team`, `/lift:product-team`, `/lift:technical-team`, `/lift:client-services-team` (only the teams the site has). Don't run them all: each run is long.
+   7. Once at least one team has reported, offer the CEO once: "Want me to turn the teams' findings into a few projects?" (`/lift:projects`). Don't offer it before any team has reported.
 
    If the brief is confirmed and every active team already has a goal, skip this step. If the owner only asked to set team goals, do just this step.
 

@@ -66,7 +66,7 @@ Call `save_team_goal` with `site_id`, `department: technical`, `focus`, `horizon
 
 ## 6. Hand-off
 
-Tell the owner the verdict, the top three actions and who does each, and what the team couldn't cover. Say the actions are waiting in **Team › Reports** on the dashboard, where they accept or dismiss each one. Offer **task-plan** (`/lift:task-plan`) to fold the accepted actions into the plan of work, and in Claude Code inside the site's repository, offer to start on the developer tasks.
+Tell the owner the verdict, the top three actions and who does each, and what the team couldn't cover. Say the actions are waiting in **Team › Reports** on the dashboard, where they accept or dismiss each one. Offer **task-plan** (`/lift:task-plan`) to fold the accepted actions into the plan of work, and in Claude Code inside the site's repository, offer to start on the developer tasks. When the owner wants the bigger wins taken on as a whole, offer **projects** (`/lift:projects`): the CEO turns the teams' actions into a few projects, each scoped, built and tested.
 
 ## Unattended mode
 

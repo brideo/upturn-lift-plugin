@@ -1,6 +1,6 @@
 ---
 name: router
-description: "The front door to Upturn Lift. Works out where a site is in its run order and sends the owner to the one skill that fits right now. Use when the owner asks \"what can Upturn Lift do\", \"what should I do next\", \"what's next for my site\", \"help me grow my site\", \"catch up on Upturn Lift\", \"run whatever is pending\", types /lift:router, or makes any open-ended website, marketing or conversion request that doesn't clearly match one skill."
+description: "The front door to Upturn Lift. Works out where a site is in its run order and sends the owner to the one skill that fits right now, including the projects lifecycle (plan, scope, build, test). Use when the owner asks \"what can Upturn Lift do\", \"what should I do next\", \"what's next for my site\", \"help me grow my site\", \"catch up on Upturn Lift\", \"run whatever is pending\", types /lift:router, or makes any open-ended website, marketing or conversion request that doesn't clearly match one skill."
 allowed-tools: Read
 ---
 
@@ -28,6 +28,10 @@ Then call `get_run_order` with the `site_id` and `purpose: check`.
 | "what should I do first", "most important tasks", "to-do list", "plan of work" | **task-plan** |
 | "fix the tasks", "do the developer tasks" (in Claude Code) | **task-plan**, do mode |
 | "test the fixes", "did that work", "verify the shipped tasks" | **task-plan**, test mode |
+| "what should we work on next", "plan projects", "turn the reports into projects", "what are the big bets" | **projects** (the CEO) |
+| "scope P-3", "scope the project" | **project-scope** |
+| "build P-3", "action P-3", "create a PR for the project" (in Claude Code, in the site's repo) | **project-build** |
+| "test the project", "test P-3", "is the project working" | **project-test** |
 | "proposal", "quote", "pitch", "scope of work for a client" | **client-proposal** |
 | A marketing goal ("grow organic traffic", "more sales or enquiries", "improve our Google Ads", "bring customers back", "what should marketing do this quarter"), or the marketing team | **marketing-team** |
 | A shop-floor goal ("sell more from the store", "fix our product pages", "improve the feed", "what should we merchandise"), or the ecommerce team | **ecommerce-team** |
@@ -39,7 +43,7 @@ Then call `get_run_order` with the `site_id` and `purpose: check`.
 | "security audit", "vulnerability or CVE check", "is my store secure", "security report for my developers" | **security-audit** |
 | Broken links, redirects, titles, canonicals, anything site-wide | `get_seo_audit` directly; offer **site-strategy** after |
 
-For an open request ("help me grow sales"), follow the run order: route to the first step that's **ready**. If a step is **locked**, say what's locking it and route to that step instead.
+For an open request ("help me grow sales"), follow the run order: route to the first step that's **ready**. If a step is **locked**, say what's locking it and route to that step instead. Once the run order is done and at least one team has reported, the next bigger step is usually **projects**; if a project is waiting on the owner (proposed, ready to deploy or failed), say so first.
 
 ## Step 3: Say it in one line
 

@@ -9,7 +9,7 @@
     {
       "name": "lift",
       "source": "./upturn-lift",
-      "description": "Connect Upturn Lift to Claude and get walked through setup with /lift:onboard: the marketing brief, page audits, the marketing strategy, a ranked task plan, and a team skill per department that sets its goal and runs it.",
+      "description": "Connect Upturn Lift to Claude and get walked through setup with /lift:onboard: the marketing brief, page audits, the marketing strategy, a ranked task plan, a team skill per department that sets its goal and runs it, and projects the CEO proposes and Claude scopes, builds and tests.",
       "category": "marketing"
     }
   ]

@@ -15,6 +15,8 @@ Pick the site first (`list_sites`).
 3. Save with `save_task_plan`. Each save is a new version on the site's **Tasks** tab.
 4. Give the owner the top three tasks and what you're least sure of.
 
+For bigger bundles of work (several tasks towards one outcome, a pull request to review, impact to measure), use **Projects** instead: the CEO proposes them with `/lift:projects` and each is scoped, built and tested on its own. The task plan stays for the everyday fixes.
+
 ## Do: "fix the tasks" (Claude Code, in the site's repo)
 
 1. Call `get_task_plan` (pass `plan_task_ids` if the owner picked some) and follow the method it returns.

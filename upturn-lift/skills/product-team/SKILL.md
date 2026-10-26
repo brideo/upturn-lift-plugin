@@ -68,7 +68,7 @@ Call `save_team_goal` with `site_id`, `department: product`, `focus`, `horizon`,
 
 ## 6. Hand-off
 
-Tell the owner the verdict, the top three actions and who does each, and what the team couldn't cover. Say the actions are waiting in **Team › Reports** on the dashboard, where they accept or dismiss each one. Also give the beachhead and the three bets from the product strategy. Offer **task-plan** (`/lift:task-plan`) for the Now items, and to run the team again next quarter.
+Tell the owner the verdict, the top three actions and who does each, and what the team couldn't cover. Say the actions are waiting in **Team › Reports** on the dashboard, where they accept or dismiss each one. Also give the beachhead and the three bets from the product strategy. Offer **task-plan** (`/lift:task-plan`) for the Now items, and to run the team again next quarter. When the owner wants the bigger wins taken on as a whole, offer **projects** (`/lift:projects`): the CEO turns the teams' actions into a few projects, each scoped, built and tested.
 
 ## Unattended mode
 

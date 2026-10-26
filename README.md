@@ -64,6 +64,7 @@ The plugin is in [`upturn-lift/`](upturn-lift). See [its README](upturn-lift/REA
 | `site-brief`, `page-audit`, `site-strategy`, `task-plan`, `security-audit`, `client-proposal` | One skill per job |
 | `marketing-team`, `ecommerce-team`, `technical-team`, `product-team`, `client-services-team` | One skill per team: its head asks for the goal, splits it between specialists and reports one ranked plan (`/lift:marketing-team` and so on) |
 | `product-strategy` | The Head of Product: beachhead, whole product, activation, positioning, bets and roadmap |
+| `projects`, `project-scope`, `project-build`, `project-test` | The projects lifecycle: the CEO proposes, the project manager scopes, a developer builds and opens a PR in Claude Code, then Claude tests it live |
 | `agents/lift-*` | The specialists a team hands work to (sub-agents in Claude Code) |
 
 ## Commands
@@ -76,10 +77,25 @@ The plugin is in [`upturn-lift/`](upturn-lift). See [its README](upturn-lift/REA
 | `/lift:technical-team` | The Technical team: security, speed and page security, written for your developers |
 | `/lift:product-team` | The Product team (software and marketplaces): the Head of Product's advisers, then a product strategy |
 | `/lift:client-services-team` | The Client services team: the brief, the plan of work and proposals |
+| `/lift:projects` | The CEO reads every team's report and proposes three to five projects with the metric each should move; you approve, change or drop each |
+| `/lift:project-scope <project uuid>` | The project manager writes the scope: tasks, acceptance checks, risks and rollout |
+| `/lift:project-build <project uuid>` | Claude Code, in your site's repo: builds the project on its own branch, reviews the code and opens a pull request |
+| `/lift:project-test <project uuid>` | Once you've deployed it, checks each task on the live site and marks the project complete or failed |
 | `/lift:site-brief`, `/lift:page-audit`, `/lift:site-strategy`, `/lift:task-plan`, `/lift:security-audit`, `/lift:product-strategy`, `/lift:client-proposal` | One job each |
 | `/lift:router` | Works out the next step for your site |
 
 Each team command takes an optional site: `/lift:marketing-team <site UUID or address>`. Without one, Claude lists your sites and asks which. You don't have to type commands: saying what you want works too.
+
+## Projects
+
+Projects turn the teams' findings into a few bigger bets, each with an owner, a pull request and a number it should move.
+
+1. **Plan:** `/lift:projects`. The CEO reads every team's report, the goals and your numbers, and proposes three to five projects ranked by value, each with a baseline and a target. You approve, change or drop each one.
+2. **Scope:** `/lift:project-scope <project uuid>`. The project manager writes what's in and out, the tasks and the checks that prove each is done.
+3. **Build:** `/lift:project-build <project uuid>`, in Claude Code inside your site's code repository. Claude works each task on a `lift/p-…` branch, reviews the code, opens a pull request and marks the project ready to deploy. It never merges or deploys: you do, then press **It's live** on the project.
+4. **Test:** `/lift:project-test <project uuid>`. Claude checks each task on the live site without changing anything. When everything passes the project is complete, and Lift measures its impact at 30, 60 and 90 days.
+
+Every project and its timeline is on the **Projects** tab of your dashboard.
 
 
 ## Updates
