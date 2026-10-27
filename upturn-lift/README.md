@@ -40,6 +40,7 @@ Setup checks the connector, picks your site, shows where it's up to, and links e
 | "audit my pending pages" | Full audits of every scan waiting, highest priority first |
 | "run the full audit for scan 42" | Report, security, marketing and performance reviews and a summary for one page |
 | "write my marketing strategy" | Priorities, channel plan, quick wins and a 90-day plan |
+| "what keywords do my competitors rank for?" | The keyword gap and who links to your competitors but not to you, from Insights › Keywords & links (Growth and Agency) |
 | "what should I do first?" | A ranked task plan across developer, content and marketing work |
 | "fix the tasks" (Claude Code) | Works through the plan's developer tasks in your repo |
 | "test the fixes" | Checks shipped tasks on the live site and marks each verified or failed |
