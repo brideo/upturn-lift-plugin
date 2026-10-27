@@ -41,7 +41,11 @@ Then call `get_run_order` with the `site_id` and `purpose: check`.
 | Any other broad goal, or "run a team" without naming one | the team whose goals fit (from `list_departments`), or ask which as multiple choice |
 | "product strategy", "product roadmap", "what should we build next", pricing and packaging, product-market fit, reaching mainstream customers | **product-strategy** (or **product-team** for the whole team) |
 | "security audit", "vulnerability or CVE check", "is my store secure", "security report for my developers" | **security-audit** |
+| "how are we doing in Google search", "what lost clicks", "why did search traffic drop", "which titles should I rewrite", "striking distance", "cannibalisation", "which keywords should we track" | **search-audit** |
+| "review my Google Ads", "audit the ads account", "where is my ad spend going", "wasted spend", "negative keywords", "ROAS by campaign", "are my ads landing on the right pages" | **ads-audit** |
 | Broken links, redirects, titles, canonicals, anything site-wide | `get_seo_audit` directly; offer **site-strategy** after |
+| "how do we rank", "which terms moved", "track this keyword" | `get_rankings` directly (`save_tracked_keywords` to add or remove terms); offer **site-strategy** after |
+| "keyword research", "what do competitors rank for", "keyword gap", "who links to my competitors", backlinks | `get_keyword_data` directly (kind `gap`, `ranking`, `links` or `link_gap`; Growth and Agency plans); offer to track the best gap terms with `save_tracked_keywords`, then **site-strategy** |
 
 For an open request ("help me grow sales"), follow the run order: route to the first step that's **ready**. If a step is **locked**, say what's locking it and route to that step instead. Once the run order is done and at least one team has reported, the next bigger step is usually **projects**; if a project is waiting on the owner (proposed, ready to deploy or failed), say so first.
 

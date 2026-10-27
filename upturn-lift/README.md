@@ -40,6 +40,7 @@ Setup checks the connector, picks your site, shows where it's up to, and links e
 | "audit my pending pages" | Full audits of every scan waiting, highest priority first |
 | "run the full audit for scan 42" | Report, security, marketing and performance reviews and a summary for one page |
 | "write my marketing strategy" | Priorities, channel plan, quick wins and a 90-day plan |
+| "what keywords do my competitors rank for?" | The keyword gap and who links to your competitors but not to you, from Insights › Keywords & links (Growth and Agency) |
 | "what should I do first?" | A ranked task plan across developer, content and marketing work |
 | "fix the tasks" (Claude Code) | Works through the plan's developer tasks in your repo |
 | "test the fixes" | Checks shipped tasks on the live site and marks each verified or failed |
@@ -67,7 +68,7 @@ Setup checks the connector, picks your site, shows where it's up to, and links e
 | `/lift:project-scope <project uuid>` | The project manager writes the scope: tasks, acceptance checks, risks and rollout |
 | `/lift:project-build <project uuid>` | Claude Code, in your site's repo: builds the project on its own branch, reviews the code and opens a pull request |
 | `/lift:project-test <project uuid>` | Once you've deployed it, checks each task on the live site and marks the project complete or failed |
-| `/lift:site-brief`, `/lift:page-audit`, `/lift:site-strategy`, `/lift:task-plan`, `/lift:security-audit`, `/lift:product-strategy`, `/lift:client-proposal` | One job each |
+| `/lift:site-brief`, `/lift:page-audit`, `/lift:site-strategy`, `/lift:task-plan`, `/lift:search-audit`, `/lift:ads-audit`, `/lift:security-audit`, `/lift:product-strategy`, `/lift:client-proposal` | One job each |
 | `/lift:router` | Works out the next step for your site |
 
 Each team command takes an optional site: `/lift:marketing-team <site UUID or address>`. Without one, Claude lists your sites and asks which. You don't have to type commands: saying what you want works too.

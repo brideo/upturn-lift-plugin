@@ -7,8 +7,8 @@ allowed-tools: Read, WebFetch, WebSearch
 # Marketing strategy
 
 1. Pick the site (`list_sites`), then call `get_run_order` with `purpose: check`. If the strategy step is **locked**, say what's locking it (usually the brief or pending audits) and offer that step instead (**site-brief** or **page-audit**).
-2. Call `get_site_strategy_inputs`. It returns the brief, research pack, every page's scores and review verdicts, the open tasks with ids, the previous strategy and the method. **Follow that method.**
-3. If the SEO crawl matters to a priority, read `get_seo_audit` so technical SEO ranks against everything else.
+2. Call `get_site_strategy_inputs`. It returns the brief, research pack, the tracked keywords' rankings, the keyword and link gaps against the brief's competitors, every page's scores and review verdicts, the open tasks with ids, the previous strategy and the method. **Follow that method.**
+3. If the SEO crawl matters to a priority, read `get_seo_audit` so technical SEO ranks against everything else. If a priority is organic growth and you need more than the inputs' top gaps, read `get_keyword_data` (kind `gap` or `link_gap`).
 4. Write it against the brief's commercial goal, as a growth strategist. Cite scan and task ids so the owner can click through.
-5. Save with `save_site_strategy`. Each save is a new version on the site's **Marketing Strategy** tab.
+5. Save with `save_site_strategy`. Each save is a new version on the site's **Marketing Strategy** tab. If the strategy names search terms to win, track them with `save_tracked_keywords`.
 6. Summarise the top three priorities and the first quick win in a few lines. Then offer "what should I do first?" (**task-plan**).

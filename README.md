@@ -61,7 +61,7 @@ The plugin is in [`upturn-lift/`](upturn-lift). See [its README](upturn-lift/REA
 | Connector | `https://upturnstudio.com.au/mcp/lift`, signed in with your Upturn account |
 | `onboard` | The guided setup (`/lift:onboard`) |
 | `router` | Works out the next step for your site |
-| `site-brief`, `page-audit`, `site-strategy`, `task-plan`, `security-audit`, `client-proposal` | One skill per job |
+| `site-brief`, `page-audit`, `site-strategy`, `task-plan`, `search-audit`, `ads-audit`, `security-audit`, `client-proposal` | One skill per job |
 | `marketing-team`, `ecommerce-team`, `technical-team`, `product-team`, `client-services-team` | One skill per team: its head asks for the goal, splits it between specialists and reports one ranked plan (`/lift:marketing-team` and so on) |
 | `product-strategy` | The Head of Product: beachhead, whole product, activation, positioning, bets and roadmap |
 | `projects`, `project-scope`, `project-build`, `project-test` | The projects lifecycle: the CEO proposes, the project manager scopes, a developer builds and opens a PR in Claude Code, then Claude tests it live |
@@ -81,7 +81,7 @@ The plugin is in [`upturn-lift/`](upturn-lift). See [its README](upturn-lift/REA
 | `/lift:project-scope <project uuid>` | The project manager writes the scope: tasks, acceptance checks, risks and rollout |
 | `/lift:project-build <project uuid>` | Claude Code, in your site's repo: builds the project on its own branch, reviews the code and opens a pull request |
 | `/lift:project-test <project uuid>` | Once you've deployed it, checks each task on the live site and marks the project complete or failed |
-| `/lift:site-brief`, `/lift:page-audit`, `/lift:site-strategy`, `/lift:task-plan`, `/lift:security-audit`, `/lift:product-strategy`, `/lift:client-proposal` | One job each |
+| `/lift:site-brief`, `/lift:page-audit`, `/lift:site-strategy`, `/lift:task-plan`, `/lift:search-audit`, `/lift:ads-audit`, `/lift:security-audit`, `/lift:product-strategy`, `/lift:client-proposal` | One job each |
 | `/lift:router` | Works out the next step for your site |
 
 Each team command takes an optional site: `/lift:marketing-team <site UUID or address>`. Without one, Claude lists your sites and asks which. You don't have to type commands: saying what you want works too.
