@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "upturn-lift": {
+      "type": "http",
+      "url": "https://upturnstudio.com.au/mcp/lift"
+    }
+  }
+}
