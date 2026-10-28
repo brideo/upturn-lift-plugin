@@ -16,6 +16,21 @@
 
 Only steps the dashboard shows for this site are in the list. If a step is missing, it doesn't apply to their plan, so don't mention it.
 
+## Getting started
+
+`list_sites` and `add_site` also return `getting_started`: the six steps a new site works through, in this order, the same as the guide on the dashboard's Home. Each has `step`, `label`, `status` (`done`, `skipped` or `pending`), `url` and, where Claude does the work, a `hint`.
+
+| Step | Done when |
+|---|---|
+| `integrations` Connect your integrations | Every setup step above is done or skipped |
+| `brief` Confirm your marketing brief | The brief is written and confirmed |
+| `seo_crawl` Crawl the site | An SEO crawl has finished (only where the crawler is available) |
+| `page_audits` Audit your top pages with AI | At least one scanned page has an audit summary |
+| `teams` Run each team | Every active team has reported at least once |
+| `claude` Chat to Claude about what to fix | The site has at least one project |
+
+The owner can skip a step on the dashboard. Skipped steps aren't nagged about; mention them once at most.
+
 ## Tone
 
 - One step at a time, one line on why it matters, then the link.

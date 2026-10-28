@@ -45,7 +45,7 @@ Everything Upturn Lift knows lives on the server, so there is nothing to store l
      3. Call `add_site` with `url`, `platform` and `name`. It returns the new `site_id` (the site's UUID) and its `setup` checklist. Carry on with that site.
      4. If it says the plan is full, give the upgrade link it returns and stop. If it says the site is already there, use that site.
 
-3. **Show where they are.** Call `get_run_order` with the `site_id` and `purpose: check`. Summarise in a few lines, one per step: brief, page audits, marketing strategy, task plan, proposal (optional). Mark each step done, ready or locked, plus what's locking it. Don't dump the raw result.
+3. **Show where they are.** The site's `getting_started` list (from `list_sites` or `add_site`) is the same six-step guide the dashboard shows on Home: integrations, brief, SEO crawl, AI page audits, a first run of every team, then chatting to Claude about what to fix. Summarise it in a few lines, one per step, done, skipped or still to do, and name the next one. Then call `get_run_order` with the `site_id` and `purpose: check` for what's locking the AI steps. Don't dump either raw result.
 
 4. **Close the dashboard gaps.** The site's `setup` list (from `list_sites` or `add_site`) has each step's status and a dashboard `url`. For each pending step Claude can't do, give one line on why it matters plus its link, **one at a time**, in this order:
    1. **Browser extension.** Scans pages the way a shopper sees them. Page audits need scans.
@@ -63,7 +63,10 @@ Everything Upturn Lift knows lives on the server, so there is nothing to store l
    3. If a goal is already saved, show it and ask "Keep this goal or change it?". Otherwise ask its `questions` together, as clickable multiple choice with the recommended option first, adapted to the `snapshot` as its `instructions` say. Add **"Skip this team for now"** as the last option of the first question.
    4. Save the answers with `save_team_goal` (one-line `statement`, `set_by: "Onboarding"`). If they skipped, save nothing and move on.
    5. When every team is done, summarise in a few lines: each team and its goal, or "skipped".
-   6. Offer to run one team now, recommending **Marketing**: "Want the Marketing team to start on its goal now?" On a yes, carry on as the **marketing-team** skill. Give the commands for the rest, for later: `/lift:ecommerce-team`, `/lift:product-team`, `/lift:technical-team`, `/lift:client-services-team` (only the teams the site has). Don't run them all: each run is long.
+   6. Offer the teams' first runs: this is step 5 of the getting-started guide. Ask once, as multiple choice:
+      - **Run every team now** (recommended for a new site): one after another, in the walk order above, each as its own skill (`/lift:marketing-team`, then `/lift:ecommerce-team` or `/lift:product-team`, `/lift:technical-team`, `/lift:client-services-team`). Say first that it's long, roughly 10–20 minutes a team, and that they can stop after any team. Skip teams that aren't listed or are turned off, and teams whose `getting_started` step shows they've already reported. After each team, say in one line what it found and carry on to the next.
+      - **Just Marketing for now**: carry on as the **marketing-team** skill, then give the commands for the rest.
+      - **Later**: give the commands for the teams the site has.
    7. Once at least one team has reported, offer the CEO once: "Want me to turn the teams' findings into a few projects?" (`/lift:projects`). Don't offer it before any team has reported.
 
    If the brief is confirmed and every active team already has a goal, skip this step. If the owner only asked to set team goals, do just this step.
